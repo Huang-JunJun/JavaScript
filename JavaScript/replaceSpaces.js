@@ -9,5 +9,4 @@
 };
 
 let s = "Mr John Smith  "
-// console.log(s.length);
 console.log(replaceSpaces(s,13));
