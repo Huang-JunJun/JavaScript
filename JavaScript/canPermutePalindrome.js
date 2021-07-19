@@ -24,7 +24,6 @@
 
     let obj = {};
     for(let i=0; i<s.length; i++){
-        console.log(s[i]);
       let char = s[i];
     //   如果对象属性已经存在对象中，就删除，否则将对象属性存为1
       if(obj[char])
