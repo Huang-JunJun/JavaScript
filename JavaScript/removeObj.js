@@ -13,8 +13,6 @@ function removeObj(arr) {
             arr2.push(arr[i])
             // 使用对象访问属性的特质查看到是否会存在相同的id值 
             obj[arr[i].id] = true
-            console.log(obj);
-            console.log(arr2);
         }
     }
     return arr2

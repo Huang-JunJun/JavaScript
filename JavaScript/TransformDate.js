@@ -34,4 +34,4 @@ function transformDate(day,hour,min) {
     return arr
 }
 
-console.log(transformDate(1,72,600));
+console.log(transformDate(0,3));
