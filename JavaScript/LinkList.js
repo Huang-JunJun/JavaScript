@@ -36,6 +36,7 @@ function LinkList() {
             tail = new_node
         }
         length++
+        return new_node
     }
 
     this.insert = (index,data) => {
