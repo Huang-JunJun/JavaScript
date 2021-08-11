@@ -89,6 +89,7 @@ let arr = [4 ,1, 2, 3]
 
         // map()
         // 对数组中的每一元素运行给定的函数，返回每次函数调用的结果组成的数组
+        // 尽量避免map嵌套使用，容易出现数组中嵌套数组的情况
         var result = arr.map(function (item, index, arr) {
             return item * 2;
         });
