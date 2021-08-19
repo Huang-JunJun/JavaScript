@@ -100,3 +100,5 @@ let arr = [4 ,1, 2, 3]
         var result = arr.forEach(function (item, index, arr) {
             console.log(item);
         });
+
+        
