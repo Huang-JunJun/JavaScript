@@ -92,3 +92,7 @@ function ArrayIsUnique7 (array) {
 
     return arr
 }
+
+const arr = []
+
+console.log(Array.isArray(arr));
