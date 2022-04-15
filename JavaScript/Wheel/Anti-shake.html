@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖</title>
+</head>
+<body>
+    <button id="btn">
+        提交
+    </button>
+
+    <script>
+        let btn = document.getElementById('btn')
+        // 点击后触发trigger()函数，第一个参数真是要执行的函数，第二个参数为定时器延迟时间
+        btn.addEventListener('click',trigger(real,1000))
+        function trigger(func, dalay) {
+            let timer
+            return function () {
+                clearTimeout(timer)
+                // 使用箭头函数就不用考虑this指向问题
+                timer = setTimeout(() => {
+                    func()
+                }, dalay)
+            }
+        }
+
+        function real() {
+            console.log('防抖啦');
+        }
+    </script>
+</body>
+</html>
