@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式原理的简易实现</title>
+</head>
+<body>
+    <script>
+        const data = {}
+        let name = '黄显竣'
+
+        Object.defineProperty(data, 'name', {
+            // 获取值触发get
+            get: () => {
+                return name
+            },
+            // 设置值触发set
+            set: (newValue) => {
+                name = newValue
+            }
+        })
+        data.name = '大帅哥'
+    </script>
+</body>
+</html>
