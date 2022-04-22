@@ -10,7 +10,17 @@
  * @return {void} Do not return anything, modify node in-place instead.
  * 删除链表节点
  */
- var deleteNode = function(node) {
-    node.val = node.next.val;
-    node.next = node.next.next;
+ var deleteNode = function(head, val) {
+  let node = head
+
+  while(node) {
+    if (node.val === val && node.next != null) {
+      node.val = node.next.val
+      node.next = node.next.next
+    } else {
+      node = node.next
+    }
+  }
+
+  return head
 };
