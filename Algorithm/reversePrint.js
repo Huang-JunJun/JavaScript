@@ -16,7 +16,7 @@ function ListNode(val) {
 }
 const reversePrint = function(head) {
     let nums = []
-    let node = head
+    let node = new ListNode(head)
     //遍历链表
     while(node !== null) {
         nums.unshift(node.val)
