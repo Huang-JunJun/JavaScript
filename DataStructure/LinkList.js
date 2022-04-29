@@ -56,7 +56,7 @@ function LinkList() {
         this.length++
     }
 
-    LinkList.prototype.findNode = (index) => {
+    LinkList.prototype.indexOf = (index) => {
         let curNode = this.head
         let curIndex = 0
         if(this.length === 0) {
@@ -101,6 +101,6 @@ list.append('789')
 list.insert('1010', 0)
 
 console.log(list);
-console.log(list.findNode(1));
+console.log(list.indexOf(1));
 list.delete(1)
 console.log(list);
