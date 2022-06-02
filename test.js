@@ -1,13 +1,8 @@
-function makeCount() {
-    let count = Math.random()
-    return function(){
-        return count
-    }
+const clearSame = (arr) => {
+    // 双重for嵌套
+    // Set
+    // Map
+    // indexOf
+    // filter
+    const arr2 = []
 }
-let conut = makeCount()
-console.log(conut())
-console.log(conut())
-console.log(conut())
-console.log(conut())
-console.log(conut())
-console.log(conut())

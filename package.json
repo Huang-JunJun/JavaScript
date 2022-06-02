@@ -1,0 +1,16 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "JavaScript学习随手笔记",
+  "main": "test.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/huang-xianjun/javascript.git"
+  },
+  "author": "HuangJunJun",
+  "license": "ISC"
+}
