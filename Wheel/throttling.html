@@ -19,12 +19,12 @@
             let timer
             return function () {
                 if(timer) {
-                    return;
+                  return;
                 }
                 // 使用箭头函数就不用考虑this指向问题
                 timer = setTimeout(() => {
-                    func()
-                    timer = null
+                  func()
+                  timer = null
                 }, dalay)
             }
         }

@@ -8,6 +8,7 @@ function ArrayIsUnique (array) {
         for (let j = i + 1; j < array.length; j++) {
             if (array[i] === array[j]) {
                 array.splice(j, 1)
+                j--
             }
         }
     }
@@ -94,5 +95,8 @@ function ArrayIsUnique7 (array) {
 }
 
 const arr = []
+const array=[1,2,2,2,3,4,4,5,6,6,6] 
 
 console.log(Array.isArray(arr));
+
+console.log(ArrayIsUnique(array));
