@@ -3,31 +3,31 @@
  * @return {number}
  */
 const pivotIndex = (nums) => {
-  const midIndex = Math.round(nums.length / 2)
+  let midIndex = 0
   let leftSum = 0
   let rightSum = 0
 
   for (let i = 0; i < nums.length; i++) {
-    if (i < midIndex) {
-      leftSum = leftSum + nums[i]
-    } else if (i > midIndex) {
-      rightSum = rightSum + nums[i]
-    }
-  }
-
-  if (leftSum < rightSum) {
-    let index = midIndex + 1
-
-    for (let i = 0; i < nums.length; i++) {
-      if (i < index) {
-        leftSum = leftSum + nums[i]
-      } else if (i > index) {
-        rightSum = rightSum + nums[i]
+    for (let j = 0; j < nums.length; j++) {
+      if (j < midIndex) {
+        leftSum = leftSum + nums[j]
+      } else if (j > midIndex) {
+        rightSum = rightSum + nums[j]
       }
     }
-  } else if (leftSum > rightSum) {
     
-  } else {
-    return midIndex
+    if(leftSum === rightSum) {
+      return midIndex
+    } else {
+      midIndex++
+      leftSum = 0
+      rightSum = 0
+    }
   }
+
+  return -1
 };
+
+const nums = [1,7,3,6,5,6]
+
+console.log(pivotIndex(nums));

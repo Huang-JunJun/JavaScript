@@ -1,33 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>节流</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #content .text {text-color:red;}
+    #content>.title {color:green;}
+    #content div.title {font-color:blue;}
+    strong {font-color:yellow;}
+    * {color:black;}
+  </style>
 </head>
 <body>
-    <button id="btn">
-        提交
-    </button>
-
-    <script>
-        let btn = document.getElementById('btn')
-        btn.addEventListener('click', trigger(real, 2000))
-        function trigger(fnc, dalay) {
-          let timer
-          return function() {
-            if(timer) return
-            timer = setTimeout(() => {
-              fnc()
-              timer = null
-            }, dalay)
-          }
-        }
-
-        function real() {
-            console.log('节流啦');
-        }
-    </script>
+  
+  <div id="content">
+  <span class="text"><strong class="title">Hello, world.</strong></span>
+  </div>
 </body>
 </html>
