@@ -71,7 +71,7 @@ function ArrayList() {
         // 获取i位置的元素,和前面的数据依次进行比较
         let j = i
         let tmp = this.array[i]
-        while(this.array[i] < this.array[j-gap] && j > 0){
+        while(tmp < this.array[j-gap] && j > 0){
           this.array[j] = this.array[j-gap]
           j = j - gap
         }
