@@ -10,19 +10,12 @@
 解释： 连续子数组 [4,-1,2,1] 的和最大，为 6。
 */
 function maxSubArray(nums) {
-    // 暴力解法 定义两个数，一个返回最后的结果，一个用来记录数据
-    // 每当循环的区间大于result 就使result = count
-    let result = 0
-    let count = 0
-    for (let i = 0; i < nums.length; i++) {
-        count = 0
-        for (let j = i; j < nums.length; j++) {
-            count = count + nums[i]
-            result = count > result ? count : result
-        }
-    }
-
-    return result
+  let pre = 0, maxAns = nums[0];
+    nums.forEach((x) => {
+        pre = Math.max(pre + x, x);
+        maxAns = Math.max(maxAns, pre);
+    });
+    return maxAns;
 }
 let nums = [-2,1,-3,4,-1,2,1,-5,4]
 
