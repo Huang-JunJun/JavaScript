@@ -12,10 +12,13 @@
 function maxSubArray(nums) {
   let pre = 0, maxAns = nums[0];
     nums.forEach((x) => {
-        pre = Math.max(pre + x, x);
-        maxAns = Math.max(maxAns, pre);
+      console.log('pre', pre);
+      console.log('maxAns', maxAns);
+      pre = Math.max(pre + x, x);
+      maxAns = Math.max(maxAns, pre);
     });
-    return maxAns;
+
+  return maxAns;
 }
 let nums = [-2,1,-3,4,-1,2,1,-5,4]
 
