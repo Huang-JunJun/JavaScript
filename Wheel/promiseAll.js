@@ -1,8 +1,8 @@
 // 手写promise.all
 const promiseAll = (promises) => {
+  if(!Array.isArray(promises)) return reject(new Error('传入的参数不是数组！'))
   // 只接受数组
   return new Promise((resolve, reject) => {
-    if(!Array.isArray(promises)) return reject(new Error('传入的参数不是数组！'))
     let results = []
     for (let i = 0; i < promises.length; i++) {
       Promise.resolve(promises[i]).then(value => {
