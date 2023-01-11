@@ -52,3 +52,45 @@
 // 题目所给测试用例皆符合罗马数字书写规则，不会出现跨位等情况。
 // IL 和 IM 这样的例子并不符合题目要求，49 应该写作 XLIX，999 应该写作 CMXCIX 。
 // 关于罗马数字的详尽书写规则，可以参考 罗马数字 - Mathematics 。
+
+const romaToInt = (s) => {
+  const list = s.split('')
+  let sum = 0
+
+  for (let i = 0; i < list.length; i++) {
+    // 处于需要减法状态
+    if(getNum(list[i]) - getNum(list[i+1]) >= 0) {
+      sum = sum + getNum(list[i])
+    } else {
+      sum = sum + getNum(list[i+1]) - getNum(list[i])
+      i++
+    }
+  }
+
+  return sum
+}
+
+const getNum = (s) => {
+  switch (s) {
+    case 'I':
+      return 1
+    case 'V':
+      return 5
+    case 'X':
+      return 10
+    case 'L':
+      return 50
+    case 'C':
+      return 100
+    case 'D':
+      return 500
+    case 'M':
+      return 1000
+    default:
+      return null
+  }
+}
+
+const s = 'LVIII'
+
+console.log(romaToInt(s));
