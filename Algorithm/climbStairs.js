@@ -20,6 +20,7 @@ const climbStairs = (n) => {
     q = r
     r = q + p
   }
+  
   return r
 };
 

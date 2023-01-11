@@ -1,13 +1,13 @@
 // 深拷贝
 function clone(target) {
     if (typeof target === 'object') {
-        let cloneTarget = Array.isArray(target) ? [] : {};
-        for (const key in target) {
-          cloneTarget[key] = clone(target[key]);
-        }
-        return cloneTarget;
+      let cloneTarget = Array.isArray(target) ? [] : {};
+      for (const key in target) {
+        cloneTarget[key] = clone(target[key]);
+      }
+      return cloneTarget;
     } else {
-        return target;
+      return target;
     }
 };
 
@@ -15,7 +15,7 @@ const object = {
   name: '黄显竣',
   a: undefined,
   arr: [1, 2, 3],
-  test: function () {
+  test: function() {
     console.log(this.name);
   }
 }

@@ -1,6 +1,5 @@
 const isValid = (str) => {
-    if (!str)
-    return;
+    if (!str) return;
     const leftToRight = {
         '(': ')',
         '[': ']',

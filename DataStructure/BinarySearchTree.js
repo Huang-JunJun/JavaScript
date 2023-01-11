@@ -194,19 +194,6 @@ function BinarySearchTree(){
       }
     }
   }
-  
-  BinarySearchTree.prototype.removeNode = function(root, key) {
-    if(root === null) return false
-    let curNode = root
-    
-    if(curNode.key > key){
-      return this.removeNode(curNode.left, key)
-    } else if(curNode.key < key) {
-      return this.removeNode(curNode.right, key)
-    } else {
-      return true
-    }
-  }
 }
 
 const bst = new BinarySearchTree()

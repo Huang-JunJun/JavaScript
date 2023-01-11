@@ -9,11 +9,8 @@ const maxArea = (height) => {
     if(height[l] < height[r]){
       sum = height[l]*(height.length-1)
       height.shift()
-    } else if (height[r] < height[l]){
-      sum = height[r]*(height.length-1)
-      height.pop()
     } else {
-      sum = height[l]*(height.length-1)
+      sum = height[r]*(height.length-1)
       height.pop()
     }
 

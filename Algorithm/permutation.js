@@ -21,15 +21,13 @@ var permutation = function(s) {
   }
 
   backtrack(arr, 0, n, perm);
-  const size = rec.length;
-  const recArr = new Array(size).fill(0);
-  console.log(rec);
-  for (let i = 0; i < size; i++) {
+  let recArr = []
+  for (let i = 0; i < rec.length; i++) {
     recArr[i] = rec[i].split(',').join('');
   }
   return recArr;
 };
 
-const rec = permutation('abcd')
+const rec = permutation('abc')
 
 console.log(rec);

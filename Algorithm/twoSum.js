@@ -38,19 +38,19 @@
 };
 
 function twoSum(nums,target) {
-    let left = 0
-    let right = nums.length - 1
+  let left = 0
+  let right = nums.length - 1
 
-    if(left !== right) {
-        let sum = nums[left] + nums[right]
-        if(sum > target) {
-            right--
-        } else if(sum === target) {
-            return [nums[left],nums[right]]
-        } else if(sum < target) {
-            left++
-        }
+  while(left !== right) {
+    let sum = nums[left] + nums[right]
+    if(sum > target) {
+        right--
+    } else if(sum === target) {
+        return [nums[left],nums[right]]
+    } else if(sum < target) {
+        left++
     }
+  }
 }
 
 let nums = [2,7,11,15]
