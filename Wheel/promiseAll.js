@@ -31,6 +31,6 @@ let p2 = new Promise((resolve, reject) => {
 //   console.log(data);
 //   p1.then(state => console.log(state))
 // })
-promiseAll([p1, p2]).then(data => {
-  console.log(data);
-})
+// promiseAll([p1, p2]).then(data => {
+//   console.log(data);
+// })
